@@ -30,7 +30,7 @@ public class ReceiveRequestReceiveResponse {
 
   @KafkaListener(topics = "cloudNodeReq")
   public void receive(String query) {
-    System.out.println(query);
+    System.out.println("Query to the cloud: "+query);
     String payload[] = query.split("#");
     Request request = new Request();
     ProcessRequest processRequest = new ProcessRequest();
